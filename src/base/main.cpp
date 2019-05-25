@@ -15,7 +15,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with TuxClocker.  If not, see <https://www.gnu.org/licenses/>.*/
 
-#include "mainwindow.h"
+#include "src/gui/mainwindow.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])

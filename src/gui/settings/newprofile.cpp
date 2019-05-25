@@ -17,7 +17,7 @@ along with TuxClocker.  If not, see <https://www.gnu.org/licenses/>.*/
 
 #include "newprofile.h"
 #include "ui_newprofile.h"
-#include "mainwindow.h"
+#include "src/gui/mainwindow.h"
 
 newProfile::newProfile(QWidget *parent) :
     QDialog(parent),

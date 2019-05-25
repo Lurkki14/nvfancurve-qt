@@ -22,7 +22,7 @@ along with TuxClocker.  If not, see <https://www.gnu.org/licenses/>.*/
 #include <QDebug>
 #include <QtX11Extras/QX11Info>
 #include <QProcess>
-#include <nvml.h>
+#include "nvml.h"
 
 class nvidia : public QObject
 {

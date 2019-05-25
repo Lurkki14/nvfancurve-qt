@@ -21,9 +21,12 @@
 # You should have received a copy of the GNU General Public License
 # along with TuxClocker.  If not, see <https://www.gnu.org/licenses/>.
 
-QT       += core gui
+QT       += core
+QT       += gui
+QT       += widgets
+QT       += printsupport
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport
+greaterThan(QT_MAJOR_VERSION, 5)
 
 TARGET = tuxclocker
 TEMPLATE = app
@@ -43,28 +46,11 @@ CONFIG += c++11
 CONFIG (release, debug|release) {
            DEFINES += QT_NO_DEBUG_OUTPUT
        }
-SOURCES += \
-        main.cpp \
-        mainwindow.cpp \
-    qcustomplot.cpp \
-    editprofile.cpp \
-    newprofile.cpp \
-    plotwidget.cpp \
-    nvidia.cpp
 
-HEADERS += \
-        mainwindow.h \
-    qcustomplot.h \
-    editprofile.h \
-    newprofile.h \
-    plotwidget.h \
-    nvidia.h \
-    nvml.h
+INCLUDEPATH += src
 
-FORMS += \
-        mainwindow.ui \
-    editprofile.ui \
-    newprofile.ui
+include(src/gui/gui.pri)
+include(src/base/base.pri)
 
 INCLUDEPATH += "/usr/lib"
 INCLUDEPATH += $$(INCLUDEPATH)
@@ -77,4 +63,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    resources.qrc
+    src/resources.qrc

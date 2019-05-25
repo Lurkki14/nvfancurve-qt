@@ -17,7 +17,7 @@ along with TuxClocker.  If not, see <https://www.gnu.org/licenses/>.*/
 
 #include "editprofile.h"
 #include "ui_editprofile.h"
-#include "mainwindow.h"
+#include "src/gui/mainwindow.h"
 
 editProfile::editProfile(QWidget *parent) :
     QDialog(parent),

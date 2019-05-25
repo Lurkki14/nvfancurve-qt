@@ -20,7 +20,7 @@ along with TuxClocker.  If not, see <https://www.gnu.org/licenses/>.*/
 
 #include <QDialog>
 #include <QVector>
-#include "qcustomplot.h"
+#include "src/gui/qcustomplot.h"
 #include <QString>
 
 namespace Ui {
@@ -100,4 +100,3 @@ private:
 };
 
 #endif // EDITPROFILE_H
-

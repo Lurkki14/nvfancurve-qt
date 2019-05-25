@@ -67,10 +67,10 @@ class SignalItemDelegate : public QStyledItemDelegate
     Q_OBJECT
     Q_DISABLE_COPY(SignalItemDelegate)
 public:
-    explicit SignalItemDelegate(QObject* parent = Q_NULLPTR):QStyledItemDelegate(parent){
+    explicit SignalItemDelegate(QObject* parent = nullptr):QStyledItemDelegate(parent){
         QObject::connect(this,&SignalItemDelegate::closeEditor,this,&SignalItemDelegate::editFinished);
     }
-    void setEditorData(QWidget *editor, const QModelIndex &index) const Q_DECL_OVERRIDE {
+    void setEditorData(QWidget *editor, const QModelIndex &index) const override {
     void editStarted();
     return QStyledItemDelegate::setEditorData(editor,index);
     }

@@ -1,8 +1,0 @@
-<RCC>
-    <qresource prefix="/icons">
-        <file>cog.png</file>
-        <file>plusicon.png</file>
-        <file>minusicon.png</file>
-        <file>gpuonfire.svg</file>
-    </qresource>
-</RCC>

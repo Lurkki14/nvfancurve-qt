@@ -19,11 +19,11 @@ along with TuxClocker.  If not, see <https://www.gnu.org/licenses/>.*/
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "editprofile.h"
+#include "settings/editprofile.h"
 #include <QProcess>
 #include <QList>
 #include <QByteArray>
-#include "nvidia.h"
+#include "src/base/nvidia/nvidia.h"
 //#include <NVCtrl/NVCtrl.h>
 
 namespace Ui {

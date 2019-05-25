@@ -17,11 +17,11 @@ along with TuxClocker.  If not, see <https://www.gnu.org/licenses/>.*/
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "editprofile.h"
-#include "ui_editprofile.h"
-#include "newprofile.h"
+#include "settings/editprofile.h"
+#include "settings/ui_editprofile.h"
+#include "settings/newprofile.h"
 #include "plotwidget.h"
-#include "nvidia.h"
+#include "src/base/nvidia/nvidia.h"
 #include <NVCtrl/NVCtrl.h>
 
 

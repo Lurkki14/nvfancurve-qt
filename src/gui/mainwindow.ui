@@ -14,8 +14,8 @@
    <string>TuxClocker</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="resources.qrc">
-    <normaloff>:/icons/gpuonfire.svg</normaloff>:/icons/gpuonfire.svg</iconset>
+   <iconset resource="src/resources.qrc">
+    <normaloff>:/src/icons/svg/gpuonfire.svg</normaloff>:/src/icons/svg/gpuonfire.svg</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout_2">
@@ -134,8 +134,8 @@
            <string/>
           </property>
           <property name="icon">
-           <iconset resource="resources.qrc">
-            <normaloff>:/icons/cog.png</normaloff>:/icons/cog.png</iconset>
+           <iconset resource="src/resources.qrc">
+            <normaloff>:/src/icons/cog.png</normaloff>:/src/icons/cog.png</iconset>
           </property>
          </widget>
         </item>
@@ -257,7 +257,7 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
-  <include location="resources.qrc"/>
+  <include location="src/resources.qrc"/>
  </resources>
  <connections/>
 </ui>
