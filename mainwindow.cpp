@@ -71,8 +71,8 @@ MainWindow::MainWindow(QWidget *parent) :
         // Divide by 2 to get the clock speed
         ui->memClkSlider->setRange(nv->GPUList[currentGPUIndex].minMemClkOffset/2, nv->GPUList[currentGPUIndex].maxMemClkOffset/2);
         ui->memClkSpinBox->setRange(nv->GPUList[currentGPUIndex].minMemClkOffset/2, nv->GPUList[currentGPUIndex].maxMemClkOffset/2);
-        ui->memClkSlider->setValue(nv->GPUList[currentGPUIndex].memClkOffset);
-        ui->memClkSpinBox->setValue(nv->GPUList[currentGPUIndex].memClkOffset);
+        ui->memClkSlider->setValue(nv->GPUList[currentGPUIndex].memClkOffset/2);
+        ui->memClkSpinBox->setValue(nv->GPUList[currentGPUIndex].memClkOffset/2);
     } else {
         ui->memClkSlider->setEnabled(false);
         ui->memClkSpinBox->setEnabled(false);
@@ -741,7 +741,7 @@ void MainWindow::applyGPUSettings()
         ret = nv->assignGPUMemClockOffset(currentGPUIndex, offsetValue*2);
         if (ret) {
             nv->GPUList[currentGPUIndex].memClkOffset = offsetValue*2;
-            settings.setValue("memoryClockOffset", offsetValue*2);
+            settings.setValue("memoryClockOffset", offsetValue);
         } else {
             errorText.append("- Memory Clock Offset");
             hadErrors = true;
@@ -1119,7 +1119,7 @@ void MainWindow::on_GPUComboBox_currentIndexChanged(int index)
     }
 
     if (nv->GPUList[index].memOverClockAvailable) {
-        ui->memClkSlider->setRange(nv->GPUList[index].minMemClkOffset, nv->GPUList[index].maxMemClkOffset);
+        ui->memClkSlider->setRange(nv->GPUList[index].minMemClkOffset/2, nv->GPUList[index].maxMemClkOffset/2);
     } else {
         ui->memClkSlider->setEnabled(false);
         ui->memClkSpinBox->setEnabled(false);
